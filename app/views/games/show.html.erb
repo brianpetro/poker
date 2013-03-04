@@ -1,5 +1,56 @@
-<p id="notice"><%= notice %></p>
 
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<div ng-controller="GameCtrl">
+	<div class="community-cards">
+		<h1>Communtiy Cards</h1>
+			<ul>
+				<li>
+						<div class="card" ng-class="display(<%= @flop[0][0] %>, <%= @flop[0][1] %>)"><span></span></div>
+						<div class="card" ng-class="display(<%= @flop[1][0] %>, <%= @flop[1][1] %>)"><span></span></div>
+						<div class="card" ng-class="display(<%= @flop[2][0] %>, <%= @flop[2][1] %>)"><span></span></div>
+				</li>
+				<li>
+						<div class="card" ng-class="display(<%= @turn[0][0] %>, <%= @turn[0][1] %>)"><span></span></div>
+				</li>
+				<li>
+						<div class="card" ng-class="display(<%= @river[0][0] %>, <%= @river[0][1] %>)"><span></span></div>
+				</li>
+			</ul>
+	</div>
+	<div class="hole-cards">
+		<h1>Hole Cards</h1>
+		<ul>
+			<li>
+			<div class="card" ng-class="display(<%= @seat1[0][0] %>, <%= @seat1[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat1[1][0] %>, <%= @seat1[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat2[0][0] %>, <%= @seat2[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat2[1][0] %>, <%= @seat2[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat3[0][0] %>, <%= @seat3[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat3[1][0] %>, <%= @seat3[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat4[0][0] %>, <%= @seat4[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat4[1][0] %>, <%= @seat4[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat5[0][0] %>, <%= @seat5[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat5[1][0] %>, <%= @seat5[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat6[0][0] %>, <%= @seat6[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat6[1][0] %>, <%= @seat6[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat7[0][0] %>, <%= @seat7[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat7[1][0] %>, <%= @seat7[1][1] %>)"><span></span></div>
+			</li>
+			<li>
+			<div class="card" ng-class="display(<%= @seat8[0][0] %>, <%= @seat8[0][1] %>)"><span></span></div>
+			<div class="card" ng-class="display(<%= @seat8[1][0] %>, <%= @seat8[1][1] %>)"><span></span></div>
+			</li>
+		</ul>
+	</div>
+</div>
