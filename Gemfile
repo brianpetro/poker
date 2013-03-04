@@ -41,3 +41,6 @@ gem 'angular-ui-bootstrap-rails'
 
 # To use debugger
 # gem 'debugger'
+
+#For Deprecated assignments
+gem 'protected_attributes'
