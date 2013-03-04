@@ -1,3 +1,13 @@
 // Place all the styles related to the Games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hole-cards {
+	float: right;
+	width: 45%;
+}
+
+.community-cards {
+	float: left;
+	width: 45%;
+}

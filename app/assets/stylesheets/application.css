@@ -11,3 +11,184 @@
  *= require_self
  *= require_tree .
  */
+ 
+ /* 
+  Deck of CSS Cards
+  by Jeff Yaus
+  v1.1, released 6 Dec 2010
+
+  The CSS for the cards is available for usa via Creative Commons:
+  Attribution-Noncommercial-Share Alike 3.0 United States
+  http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+*/
+.card {
+ display:block;
+ position:relative;
+ float:left;
+ font-weight:bold;
+ background-color:#f6f6f6;
+ width:5em;
+ height:7em;
+ border-width:.07em .13em .13em .07em;
+ border-style:solid;
+ border-color:#666;
+ border-radius:.3em;
+ -moz-border-radius:.3em;
+ -webkit-border-radius:.3em;
+ margin:.3em;
+ font-family:serif;
+}
+.card:before, .card:after { /* upper left of card */
+ display:block;
+ text-align:center;
+ width:.8em;
+ padding:.1em .2em 0 .1em;
+ line-height:1em;
+}
+
+.card span { /* center of card */
+ display:block;
+ text-align:center;
+ float:right;
+ margin-top:0em;
+}
+.card span:before {
+ display:block;
+ font-size:1.6em;
+}
+.card span:after {
+ display:block;
+ font-size:1.6em;
+ width:1em;
+ padding:0 0 0 .5em;
+}
+
+.card p { /* accessibility */
+ color:#f6f6f6;
+ position:absolute;
+ top:0;
+ right:0;
+ font-size:1px;
+ width:1px;
+ height:1px;
+ overflow:hidden;
+}
+
+/* suit colors */
+.hearts, .diamonds {color:#c00}
+.clubs, .spades    {color:#000}
+.diamonds {word-spacing:.4em}
+
+/* upper left values */
+.vK:before  {content:"K"}
+.vQ:before  {content:"Q"}
+.vJ:before  {content:"J"}
+.v10:before {content:"10"}
+.v9:before  {content:"9"}
+.v8:before  {content:"8"}
+.v7:before  {content:"7"}
+.v6:before  {content:"6"}
+.v5:before  {content:"5"}
+.v4:before  {content:"4"}
+.v3:before  {content:"3"}
+.v2:before  {content:"2"}
+.vA:before  {content:"A"}
+
+/* upper left suits */
+.hearts:after   {content:"\2665"}
+.diamonds:after {content:"\2666"}
+.clubs:after    {content:"\2663"}
+.spades:after   {content:"\2660"}
+
+/* center layout and sizes */
+.vK span:before, .vQ span:before, .vJ span:before {font-size:3em;   margin:.2em 0 0 0;} 
+.v10 span:before, .v9 span:before, .v8 span:before{margin:-.7em .3em 0 0;  width:2em;   line-height:1.1em; }
+.v10 span:after                                   {margin:-4.4em .3em 0 0;              line-height:2.2em;}
+.v9 span:after                                    {margin:-2.8em .3em 0 0;}
+.v7 span:after                                    {margin:-3.2em .3em 0 0;}
+.v7 span:before, .v6 span:before                  {margin:-.6em .3em 0 0;  width:2em;   line-height:1.3em;}
+.v5 span:after                                    {margin:-3.2em .2em 0 0; padding-left:.4em}
+.v5 span:before, .v4 span:before                  {margin:-1.2em .3em 0 0; width:1.7em; line-height:2.6em}
+.v3 span:before                                   {margin:-.6em .7em 0 0;  width:1em;   line-height:1.3em;}
+.v2 span:before                                   {margin:-1.2em .7em 0 0; width:1em;   line-height:2.6em;}
+.vA span:before                                   {font-size:4em;   margin:-.1em .2em 0 0;}
+
+/* center suits */
+.vK span:before {content:"\265A"; }
+.vQ span:before {content:"\265B";}
+.vJ span:before {content:"\2658";} /* the jack looks a little, well, horse-faced */
+
+.v10.hearts span:before, .v9.hearts span:before, .v8.hearts span:before  {content:"\2665  \2665  \2665  \2665  \2665  \2665  \2665  \2665";}
+.v10.hearts span:after   {content:"\2665  \2665";}
+.v9.hearts span:after   {content:"\2665";}
+.v7.hearts span:after   {content:"\2665";}
+.v7.hearts span:before, .v6.hearts span:before  {content:"\2665  \2665  \2665  \2665  \2665  \2665";}
+.v5.hearts span:before  {content:"\2665  \2665  \2665  \2665  \2665";} .v5.hearts span:after   {content:"\2665";}
+.v4.hearts span:before  {content:"\2665  \2665  \2665  \2665";} 
+.v3.hearts span:before  {content:"\2665  \2665  \2665";}
+.v2.hearts span:before  {content:"\2665  \2665";}
+.vA.hearts span:before  {content:"\2665"}
+
+.v10.diamonds span:before, .v9.diamonds span:before, .v8.diamonds span:before  {content:"\2666  \2666  \2666  \2666  \2666  \2666  \2666  \2666";}
+.v10.diamonds span:after   {content:"\2666  \2666";}
+.v9.diamonds span:after   {content:"\2666";}
+.v7.diamonds span:after   {content:"\2666";}
+.v7.diamonds span:before, .v6.diamonds span:before  {content:"\2666  \2666  \2666  \2666  \2666  \2666";}
+.v5.diamonds span:before  {content:"\2666  \2666  \2666  \2666  \2666";} .v5.diamonds span:after   {content:"\2666";}
+.v4.diamonds span:before  {content:"\2666  \2666  \2666  \2666";}
+.v3.diamonds span:before  {content:"\2666  \2666  \2666";}
+.v2.diamonds span:before  {content:"\2666  \2666";}
+.vA.diamonds span:before  {content:"\2666"}
+
+.v10.clubs span:before, .v9.clubs span:before, .v8.clubs span:before  {content:"\2663  \2663  \2663  \2663  \2663  \2663  \2663  \2663";}
+.v10.clubs span:after   {content:"\2663  \2663";}
+.v9.clubs span:after   {content:"\2663";}
+.v7.clubs span:after   {content:"\2663";}
+.v7.clubs span:before, .v6.clubs span:before  {content:"\2663  \2663  \2663  \2663  \2663  \2663";}
+.v5.clubs span:before  {content:"\2663  \2663  \2663  \2663  \2663";} .v5.clubs span:after   {content:"\2663";}
+.v4.clubs span:before  {content:"\2663  \2663  \2663  \2663";}
+.v3.clubs span:before  {content:"\2663  \2663  \2663";}
+.v2.clubs span:before  {content:"\2663  \2663";}
+.vA.clubs span:before  {content:"\2663"}
+
+.v10.spades span:before, .v9.spades span:before, .v8.spades span:before  {content:"\2660  \2660  \2660  \2660  \2660  \2660  \2660  \2660";}
+.v10.spades span:after   {content:"\2660  \2660";}
+.v9.spades span:after   {content:"\2660";}
+.v7.spades span:after   {content:"\2660";}
+.v7.spades span:before, .v6.spades span:before  {content:"\2660  \2660  \2660  \2660  \2660  \2660";}
+.v5.spades span:before  {content:"\2660  \2660  \2660  \2660";}  .v5.spades span:after   {content:"\2660";}
+.v4.spades span:before  {content:"\2660  \2660  \2660  \2660";}
+.v3.spades span:before  {content:"\2660  \2660  \2660";}
+.v2.spades span:before  {content:"\2660  \2660";}
+.vA.spades span:before  {content:"\2660"}
+
+/* jokers */
+.vJoker:before, .vJokerBlack:before, .vJokerRed:before {content:"Joker"; color:#000; text-align:center; width:5em; font-variant:small-caps;}
+.vJoker:after, .vJokerBlack:after, .vJokerRed:after {content:""}
+.vJoker span:before, .vJokerBlack span:before, .vJokerRed span:before {content:"\263A"; font-size:4.6em; color:#000; margin:-.1em .4m 0 0;}
+.vJokerRed:before, .vJokerRed span:before {color:#c00;}
+
+/* face down cards */
+.facedown {
+ background-color:#cc9;
+}
+.facedown:before, .facedown:after, .facedown span:before {display:none;}
+.facedown span:after {
+ display:block;
+ background-color:#bb8;
+ width:3.6em;
+ height:3.5em;
+ margin:.55em;
+ padding:2em 0 0 0;
+ border:.15em dashed #966;
+  border-radius:.3em;
+ -moz-border-radius:.3em;
+ -webkit-border-radius:.3em;
+ font-size:1em;
+ color:#987;
+ content:"\2748  ";
+}
+.facedown p {display:none}
+/* --- end Deck of CSS Cards --- */
+
+
