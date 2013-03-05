@@ -4,37 +4,37 @@
 			<h1>Communtiy Cards</h1>
 				<ul id="flop" class="table">
 					<li>
-						<div class="card rank-7 spades">
-								<span class="rank">7</span>
-								<span class="suit">&spades;</span>
+						<div class="card" ng-class="classDisplay(<%= @flop[0][0] %>, <%= @flop[0][1] %>)">
+								<span class="rank" ng-bind="valDisplay(<%= @flop[0][0] %>)"></span>
+								<span class="suit" ng-bind="suitDisplay(<%= @flop[0][1] %>)"></span>
 						</div>
 					</li>
 					<li>
-						<div class="card rank-7 spades">
-								<span class="rank">7</span>
-								<span class="suit">&spades;</span>
+						<div class="card" ng-class="classDisplay(<%= @flop[1][0] %>, <%= @flop[1][1] %>)">
+								<span class="rank" ng-bind="valDisplay(<%= @flop[1][0] %>)"></span>
+								<span class="suit" ng-bind="suitDisplay(<%= @flop[1][1] %>)"></span>
 						</div>
 					</li>
 					<li>
-						<div class="card rank-7 spades">
-								<span class="rank">7</span>
-								<span class="suit">&spades;</span>
+						<div class="card" ng-class="classDisplay(<%= @flop[2][0] %>, <%= @flop[2][1] %>)">
+								<span class="rank" ng-bind="valDisplay(<%= @flop[2][0] %>)"></span>
+								<span class="suit" ng-bind="suitDisplay(<%= @flop[2][1] %>)"></span>
 						</div>
 					</li>
 				</ul>
 				<ul id="seat1" class="table">
 					<li>
-						<div class="card rank-7 spades">
-								<span class="rank">7</span>
-								<span class="suit">&spades;</span>
+						<div class="card" ng-class="classDisplay(<%= @turn[0][0] %>, <%= @turn[0][1] %>)">
+								<span class="rank" ng-bind="valDisplay(<%= @turn[0][0] %>)"></span>
+								<span class="suit" ng-bind="suitDisplay(<%= @turn[0][1] %>)"></span>
 						</div>			
 					</li>
 				</ul>
 				<ul id="seat1" class="table">
 					<li>
-						<div class="card rank-7 spades">
-								<span class="rank">7</span>
-								<span class="suit">&spades;</span>
+						<div class="card" ng-class="classDisplay(<%= @river[0][0] %>, <%= @river[0][1] %>)">
+								<span class="rank" ng-bind="valDisplay(<%= @river[0][0] %>)"></span>
+								<span class="suit" ng-bind="suitDisplay(<%= @river[0][1] %>)"></span>
 						</div>			
 					</li>
 				</ul>
@@ -43,113 +43,113 @@
 			<h1>Hole Cards</h1>
 			<ul id="seat1" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat1[0][0] %>, <%= @seat1[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat1[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat1[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat1[1][0] %>, <%= @seat1[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat1[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat1[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat2" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat2[0][0] %>, <%= @seat2[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat2[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat2[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat2[1][0] %>, <%= @seat2[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat2[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat2[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat3" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat3[0][0] %>, <%= @seat3[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat3[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat3[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat3[1][0] %>, <%= @seat3[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat3[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat3[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat4" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat4[0][0] %>, <%= @seat4[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat4[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat4[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat4[1][0] %>, <%= @seat4[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat4[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat4[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat5" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat5[0][0] %>, <%= @seat5[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat5[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat5[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat5[1][0] %>, <%= @seat5[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat5[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat5[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat6" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat6[0][0] %>, <%= @seat6[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat6[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat6[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat6[1][0] %>, <%= @seat6[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat6[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat6[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat7" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat7[0][0] %>, <%= @seat7[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat7[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat7[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat7[1][0] %>, <%= @seat7[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat7[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat7[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
 			<ul id="seat8" class="hand">
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat8[0][0] %>, <%= @seat8[0][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat8[0][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat8[0][1] %>)"></span>
 					</div>			
 				</li>
 				<li>
-					<div class="card rank-7 spades">
-						  <span class="rank">7</span>
-						  <span class="suit">&spades;</span>
+					<div class="card" ng-class="classDisplay(<%= @seat8[1][0] %>, <%= @seat8[1][1] %>)">
+						  <span class="rank" ng-bind="valDisplay(<%= @seat8[1][0] %>)"></span>
+						  <span class="suit" ng-bind="suitDisplay(<%= @seat8[1][1] %>)"></span>
 					</div>
 				</li>
 			</ul>
