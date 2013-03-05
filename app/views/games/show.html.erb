@@ -1,56 +1,158 @@
-
-<div ng-controller="GameCtrl">
-	<div class="community-cards">
-		<h1>Communtiy Cards</h1>
-			<ul>
+<div class="playingCards [fourColours|faceImages|simpleCards|inText|rotateHand]">
+	<div ng-controller="GameCtrl">
+		<div class="community-cards">
+			<h1>Communtiy Cards</h1>
+				<ul id="flop" class="table">
+					<li>
+						<div class="card rank-7 spades">
+								<span class="rank">7</span>
+								<span class="suit">&spades;</span>
+						</div>
+					</li>
+					<li>
+						<div class="card rank-7 spades">
+								<span class="rank">7</span>
+								<span class="suit">&spades;</span>
+						</div>
+					</li>
+					<li>
+						<div class="card rank-7 spades">
+								<span class="rank">7</span>
+								<span class="suit">&spades;</span>
+						</div>
+					</li>
+				</ul>
+				<ul id="seat1" class="table">
+					<li>
+						<div class="card rank-7 spades">
+								<span class="rank">7</span>
+								<span class="suit">&spades;</span>
+						</div>			
+					</li>
+				</ul>
+				<ul id="seat1" class="table">
+					<li>
+						<div class="card rank-7 spades">
+								<span class="rank">7</span>
+								<span class="suit">&spades;</span>
+						</div>			
+					</li>
+				</ul>
+		</div>
+		<div class="hole-cards">
+			<h1>Hole Cards</h1>
+			<ul id="seat1" class="hand">
 				<li>
-						<div class="card" ng-class="display(<%= @flop[0][0] %>, <%= @flop[0][1] %>)"><span></span></div>
-						<div class="card" ng-class="display(<%= @flop[1][0] %>, <%= @flop[1][1] %>)"><span></span></div>
-						<div class="card" ng-class="display(<%= @flop[2][0] %>, <%= @flop[2][1] %>)"><span></span></div>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
 				</li>
 				<li>
-						<div class="card" ng-class="display(<%= @turn[0][0] %>, <%= @turn[0][1] %>)"><span></span></div>
-				</li>
-				<li>
-						<div class="card" ng-class="display(<%= @river[0][0] %>, <%= @river[0][1] %>)"><span></span></div>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
 				</li>
 			</ul>
-	</div>
-	<div class="hole-cards">
-		<h1>Hole Cards</h1>
-		<ul>
-			<li>
-			<div class="card" ng-class="display(<%= @seat1[0][0] %>, <%= @seat1[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat1[1][0] %>, <%= @seat1[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat2[0][0] %>, <%= @seat2[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat2[1][0] %>, <%= @seat2[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat3[0][0] %>, <%= @seat3[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat3[1][0] %>, <%= @seat3[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat4[0][0] %>, <%= @seat4[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat4[1][0] %>, <%= @seat4[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat5[0][0] %>, <%= @seat5[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat5[1][0] %>, <%= @seat5[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat6[0][0] %>, <%= @seat6[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat6[1][0] %>, <%= @seat6[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat7[0][0] %>, <%= @seat7[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat7[1][0] %>, <%= @seat7[1][1] %>)"><span></span></div>
-			</li>
-			<li>
-			<div class="card" ng-class="display(<%= @seat8[0][0] %>, <%= @seat8[0][1] %>)"><span></span></div>
-			<div class="card" ng-class="display(<%= @seat8[1][0] %>, <%= @seat8[1][1] %>)"><span></span></div>
-			</li>
-		</ul>
+			<ul id="seat2" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat3" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat4" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat5" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat6" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat7" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+			<ul id="seat8" class="hand">
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>			
+				</li>
+				<li>
+					<div class="card rank-7 spades">
+						  <span class="rank">7</span>
+						  <span class="suit">&spades;</span>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
